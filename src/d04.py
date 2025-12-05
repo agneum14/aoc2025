@@ -23,15 +23,14 @@ def silver(i: str) -> int:
 
 def gold(i: str) -> int:
     forklifts = parse(i)
-    change = True
     res = 0
-    while change:
-        change = False
+    while True:
         slated = set([x for x in forklifts if valid_forklift(forklifts, x)])
         if slated:
             forklifts = forklifts - slated
             res += len(slated)
-            change = True
+        else:
+            break
     return res
 
 
