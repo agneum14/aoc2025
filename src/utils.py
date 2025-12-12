@@ -9,6 +9,10 @@ def le(x: int) -> str:
     with open(f"inputs/{_n(x)}e.txt", "r") as f:
         return f.read()
 
+def lei(x: int, i: int) -> str:
+    with open(f"inputs/{_n(x)}e{i}.txt", "r") as f:
+        return f.read()
+
 
 def li(x: int) -> str:
     with open(f"inputs/{_n(x)}i.txt", "r") as f:
